@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8893b709f5.js" crossorigin="anonymous"></script>
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     header{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         z-index: 1000;
+         padding: 40px 100px;
+     }
+ 
+     .logo a{
+       font-size: 30px;
+         color: rgb(255, 255, 255);
+     }
+     .logo a span{
+         color: cyan;
+     }
+     a{
+         text-decoration: none;
+     }
+     .banner{
+         position: relative;
+         width: 100%;
+         min-height: 100vh;
+         padding: 0 100px;
+         background-image:linear-gradient(to right bottom,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)),
+    url(b2.png);
+         background-position: center;
+         background-size: cover;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .content{
+         max-width: 550px;
+         color: white;
+     }
+     .play{
+         position: relative;
+         display: inline-flex;
+         justify-content: flex-start;
+         align-items: center;
+         color: #fff;
+     }
+     .trailer{
+         position:fixed;
+         top: 50%;
+         left:50%;
+         transform: translate(-50%,-50%);
+         z-index: 100000;
+         background-color: black;
+         width: 100%;
+         height: 100%;
+         display: flex;
+         align-items: center;
+         text-align: center;
+    display: none;
+     }
+     .trailer .active{
+         visibility: visible;
+         opacity: 1;
+     }
+     .trailer video{
+         max-width: 900px;
+         outline: none;
+     }
+     .trailer .close{
+         position: absolute;
+         top: 30px;
+         right: 30px;
+         cursor: pointer;
+    
+     }
+     .play{
+         margin: 30px 0;
+         font-size: 30px;
+     }
+    .close{
+         color: white;
+         position: absolute;
+         top: 30px;
+         right: 30px;
+     }
+
+     @media(max-width:991px)
+     {
+         header{
+             padding: 20px 50px;
+         }
+         .banner{
+             padding: 100px 50px;
+         }.trailer video{
+             max-width: 90%;
+             outline: none;
+         }
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+.slides::-webkit-scrollbar{
+display: none;
+}
+
+div.slides {
+   
+  background:black;
+  overflow: auto;
+  white-space: nowrap;
+
+
+
+}
+.card
+{
+   
+    margin: 5px;
+    display: inline-block;
+  color: transparent;
+  position: relative;
+  text-align: center;
+background-size: cover;
+background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+background: transparent;
+  z-index: 1;
+
+}
+
+
+.card:nth-child(2)
+{
+    background: url(2.png);
+}
+
+.card:nth-child(1)
+{
+    background: url(1.png);
+}
+.card:nth-child(3)
+{
+    background: url(3.png);
+}
+.card:nth-child(4)
+{
+    background: url(4.png);
+}
+.card:nth-child(5)
+{
+    background: url(5.png);
+}
+.card:nth-child(6)
+{
+    background: url(6.png);
+}
+.card:nth-child(7)
+{
+    background: url(7.png);
+}
+.card:nth-child(8)
+{
+    background: url(8.png);
+}
+
+
+
+@media(max-width: 786px) {
+
+.logo {
+      position: fixed;
+      top: 0;
+      margin-top: 16px;
+}
+
+.nav ul {
+      
+      background: #000;
+}
+
+.nav.black ul {
+      background: #000;
+}
+
+.showing {
+      max-height: 34em;
+}
+
+.nav ul li {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 24px;
+      text-align: center;
+}
+
+.menu-icon {
+      display: block;
+}
+#myDIV{
+  display: none;
+}
+div.card
+{
+transform: rotateZ(0deg);
+height: 150px;
+width: 130px;
+background-size: cover;
+}
+}
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h2  class="logo"><a href="">BL<span>i</span>NG</a></h2>
+    <div class="menu"></div>
+</header>
+<div class="banner">
+    <div class="content">
+        <h3>
+            BLOODSHOT
+        </h3>
+        <br>
+        <h5>
+            2020 | ACTION, SUPERHERO, SCI-FI
+        </h5>
+        <br>
+        <p>
+           
+            Based on the bestselling comic book, Vin Diesel stars as Ray Garrison, a soldier recently killed in action and brought back to life as the superhero Bloodshot by the RST corporation.  With an army of nanotechnology in his veins, he’s an unstoppable force –stronger than ever and able to heal instantly.  But in controlling his body, the company has sway over his mind and memories, too.  Now, Ray doesn’t know what’s real and what’s not – but he’s on a mission to find out.
+            
+            .</p>
+   <a href="#" class="play" onclick="toggle();"><i class="fas fa-play-circle"></i> play</a>
+
+   
+            </div>
+</div>
+<div class="trailer">
+    <video class="video" src="see-ming_lee--everchanging_cloudscape.mp4" controls="true"></video>
+    <a href="#" class="close" onclick="toggle();"><i class="fas fa-times"></i></a>
+</div>
+
+
+
+
+
+
+
+
+<h2 style="color:  rgb(255, 255, 255);background-color:black;">
+    LATEST ARRIVAL
+</h2>
+<div class="slides">
+<div class="card">
+
+
+</div>
+<div class="card">
+
+</div>
+<div class="card">
+
+
+</div>
+<div class="card">
+
+</div>
+<div class="card">
+
+</div>
+<div class="card">
+
+
+</div>
+<div class="card">
+
+
+</div>
+<div class="card">
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function toggle(){
+        var trailer = document.querySelector('.trailer');
+        var video = document.querySelector('.video');
+   
+
+    
+	  if (trailer.style.display === "none") {
+		trailer.style.display = "block";
+	  } else {
+		trailer.style.display = "none";
+	  }
+
+       video.currentTime=0;
+       video.pause(); 
+    }
+</script>
+</body>
+</html>
